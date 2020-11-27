@@ -45,10 +45,8 @@ BLOCK_LINE = "ACTUAL LINE OF CODE RESPONSIBLE FOR THIS ALERT:"
 # Going to open the tags list and make sure the whitespaces are taken care of.
 # - - - -
 
-print("Reading TAGS file...")
-print("")
-print("...Please wait...This could take some time...")
-print("")
+print("Reading TAGS file...\n")
+print("...Please wait...This could take some time...\n")
 f=open(kh_tag_path,'r')
 kh_tags_list =(f.read()).split('\n')
 if kh_tags_list[-1]=="" or kh_tags_list[-1]==" ":
@@ -103,8 +101,7 @@ for phish_trk_tags in kh_tags_list:
 # The blocks generated in the tmp log are usable, but unsorted.
 # - - - -
 
-print("Creating TMP_kit_hunter_log")
-print("")
+print("Creating TMP_kit_hunter_log\n")
 
 for i in range(0,len(data)):
       f.write(
@@ -143,8 +140,7 @@ f.close()
 # Run the script a few times and check the results, tune the tag file as needed.
 #- - - -
 
-print("Creating final log using TMP_kit_hunter_log")
-print("")
+print("Creating final log using TMP_kit_hunter_log\n")
 
 tag_blocks = {}
 
@@ -252,15 +248,10 @@ write_summary_file()
 os.remove("TMP_kit_hunter_log.tmp")
 
 # None of the print stuff was really needed, but it's there so the user knows the script is doing something.
-print("")
-print("TMP_kit_hunter_log removed")
-print("")
-print("FINAL REPORT GENERATED...")
-print("")
-print("FINISHED! Check kit_hunter_report.log for details.")
-print("")
-print("The kit_hunter_report.log is located in the same directory as kit_hunter.")
-print("")
+print("TMP_kit_hunter_log removed\n")
+print("FINAL REPORT GENERATED...\n")
+print("FINISHED! Check kit_hunter_report.log for details.\n")
+print("The kit_hunter_report.log is located in the same directory as kit_hunter.\n")
 print("-30-")
 
 # -30- #
